@@ -35,13 +35,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Lakuko\\FilamentUserSanctum\\": "src",
-            "Lakuko\\FilamentUserSanctum\\Database\\Factories\\": "database/factories"
+            "Lakuko\\FilamentSanctum\\": "src",
+            "Lakuko\\FilamentSanctum\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Lakuko\\FilamentUserSanctum\\Tests\\": "tests"
+            "Lakuko\\FilamentSanctum\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -63,10 +63,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Lakuko\\FilamentUserSanctum\\FilamentUserSanctumServiceProvider"
+                "Lakuko\\FilamentSanctum\\FilamentSanctumServiceProvider"
             ],
             "aliases": {
-                "FilamentUserSanctum": "Lakuko\\FilamentUserSanctum\\Facades\\FilamentUserSanctum"
+                "FilamentSanctum": "Lakuko\\FilamentSanctum\\Facades\\FilamentSanctum"
             }
         }
     },
