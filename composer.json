@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "lakuko/filament-user-sanctum",
+    "description": "Filament plugin to manage user and token from sanctum",
     "keywords": [
-        ":vendor_name",
+        "Lakuko",
         "laravel",
-        ":package_slug"
+        "filament-user-sanctum"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/lakuko/filament-user-sanctum",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Lakuko",
+            "email": "1040745+dulabs@users.noreply.github.com",
             "role": "Developer"
         }
     ],
@@ -24,33 +24,28 @@
     "require-dev": {
         "laravel/pint": "^1.0",
         "nunomaduro/collision": "^6.0",
-        "nunomaduro/larastan": "^2.0.1",
         "orchestra/testbench": "^7.0",
         "pestphp/pest": "^1.21",
         "pestphp/pest-plugin-laravel": "^1.1",
         "pestphp/pest-plugin-livewire": "^1.0",
         "pestphp/pest-plugin-parallel": "^0.3",
-        "phpstan/extension-installer": "^1.1",
-        "phpstan/phpstan-deprecation-rules": "^1.0",
-        "phpstan/phpstan-phpunit": "^1.0",
         "phpunit/phpunit": "^9.5",
         "spatie/laravel-ray": "^1.26"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Lakuko\\FilamentUserSanctum\\": "src",
+            "Lakuko\\FilamentUserSanctum\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Lakuko\\FilamentUserSanctum\\Tests\\": "tests"
         }
     },
     "scripts": {
         "pint": "vendor/bin/pint",
         "test:pest": "vendor/bin/pest --parallel",
-        "test:phpstan": "vendor/bin/phpstan analyse",
         "test": [
             "@test:pest",
             "@test:phpstan"
@@ -67,10 +62,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Lakuko\\FilamentUserSanctum\\FilamentUserSanctumServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "FilamentUserSanctum": "Lakuko\\FilamentUserSanctum\\Facades\\FilamentUserSanctum"
             }
         }
     },
