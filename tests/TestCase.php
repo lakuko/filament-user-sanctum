@@ -4,9 +4,9 @@ namespace Lakuko\FilamentSanctum\Tests;
 
 use Filament\FilamentServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Lakuko\FilamentSanctum\FilamentSanctumServiceProvider;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Lakuko\FilamentSanctum\FilamentSanctumServiceProvider;
 
 class TestCase extends Orchestra
 {

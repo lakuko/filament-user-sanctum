@@ -2,15 +2,11 @@
 
 namespace Lakuko\FilamentSanctum\Resources;
 
-use Lakuko\FilamentSanctum\Resources\UserResource\Pages;
-use Lakuko\FilamentSanctum\Resources\UserResource\RelationManagers;
-use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Lakuko\FilamentSanctum\Resources\UserResource\Pages;
 
 class UserResource extends Resource
 {
@@ -79,7 +75,7 @@ class UserResource extends Resource
                         'success',
                         'danger' => fn ($state): bool => $state === null,
                     ])
-                    ->label(strval(__('filament-sanctum::filament-sanctum.field.user.verified_at')))
+                    ->label(strval(__('filament-sanctum::filament-sanctum.field.user.verified_at'))),
             ])
             ->filters([
                 TernaryFilter::make('email_verified_at')
@@ -93,14 +89,14 @@ class UserResource extends Resource
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -108,5 +104,5 @@ class UserResource extends Resource
             'create' => Pages\CreateUser::route('/create'),
             'edit' => Pages\EditUser::route('/{record}/edit'),
         ];
-    }    
+    }
 }
