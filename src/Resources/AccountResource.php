@@ -25,7 +25,7 @@ class AccountResource extends Resource
 
     public static function getLabel(): string
     {
-        return strval(__('filament-sanctum::filament-sanctum.section.account'));
+        return strval(__('filament-sanctumr::filament-sanctum.section.account'));
     }
 
     public static function getPluralLabel(): string
