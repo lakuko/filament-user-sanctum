@@ -3,9 +3,9 @@
 // config for Lakuko/FilamentUserSanctum
 return [
     'models' => [
-        'User' => \Lakuko\FilamentUserSanctum\Models\User::class,
+        'User' => \Lakuko\FilamentSanctum\Models\User::class,
     ],
     'resources' => [
-        'UserResource' => \Lakuko\FilamentUserSanctum\Resources\UserResource::class,
+        'UserResource' => \Lakuko\FilamentSanctum\Resources\UserResource::class,
     ],
 ];
