@@ -22,4 +22,4 @@ return [
     'field.user.confirm_password'   => 'Confirm Password',
     'field.user.verified'           => 'Verified',
 
-]
+];
