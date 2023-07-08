@@ -41,7 +41,7 @@ class FilamentSanctumServiceProvider extends PluginServiceProvider
     public function configurePackage(Package $package): void
     {
         $package->name(static::$name)
-        ->hasConfigFile()
-        ->hasTranslations();
+            ->hasConfigFile()
+            ->hasTranslations();
     }
 }

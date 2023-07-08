@@ -2,15 +2,11 @@
 
 namespace Lakuko\FilamentSanctum\Resources;
 
-use Lakuko\FilamentSanctum\Resources\AccountResource\Pages;
-use Lakuko\FilamentSanctum\Resources\AccountResource\RelationManagers;
-use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Lakuko\FilamentSanctum\Resources\AccountResource\Pages;
 
 class AccountResource extends Resource
 {
@@ -98,7 +94,7 @@ class AccountResource extends Resource
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -106,5 +102,5 @@ class AccountResource extends Resource
             'create' => Pages\CreateAccount::route('/create'),
             'edit' => Pages\EditAccount::route('/{record}/edit'),
         ];
-    }    
+    }
 }

@@ -2,7 +2,6 @@
 
 namespace Lakuko\FilamentSanctum\Resources\AccountResource\Pages;
 
-use Lakuko\FilamentSanctum\Resources\AccountResource;
 use Filament\Pages\Actions;
 use Filament\Resources\Pages\EditRecord;
 use Illuminate\Support\Facades\Config;

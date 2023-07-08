@@ -11,7 +11,6 @@ use Spatie\Permission\Traits\HasRoles;
 
 class Account extends Authenticatable
 {
-    
     use HasApiTokens, HasFactory, Notifiable, HasRoles;
 
     /**
