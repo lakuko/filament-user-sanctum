@@ -18,9 +18,9 @@ class UserResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'email';
 
-    protected static ?string $slug = 'user-manage';
+    protected static ?string $slug = 'account';
 
-    public function __consxtruct() 
+    public function __construct()
     {
         static::$model = config('filament-sanctum.models.User');
     }
