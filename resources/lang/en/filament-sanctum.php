@@ -5,6 +5,8 @@ return [
     'section.group' => 'Account',
     'section.users' => 'Users',
     'section.user' => 'User',
+    'section.accounts' => 'Accounts',
+    'section.account' => 'Account',
 
     /*
         |--------------------------------------------------------------------------
