@@ -2,13 +2,11 @@
 
 namespace Lakuko\FilamentSanctum\Resources;
 
+use Filament\Forms\Components\TextInput;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Filament\Forms\Components\TextInput;
 use Lakuko\FilamentSanctum\Resources\AccountResource\Pages;
 
 class AccountResource extends Resource
