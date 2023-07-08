@@ -6,6 +6,9 @@ use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Forms\Components\TextInput;
 use Lakuko\FilamentSanctum\Resources\AccountResource\Pages;
 
 class AccountResource extends Resource
@@ -53,18 +56,18 @@ class AccountResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('id')
+                Tables\Columns\TextColumn::make('id')
                     ->sortable()
                     ->label(strval(__('filament-sanctum::filament-sanctum.field.id'))),
-                TextColumn::make('name')
+                Tables\Columns\TextColumn::make('name')
                     ->searchable()
                     ->sortable()
                     ->label(strval(__('filament-sanctum::filament-sanctum.field.user.name'))),
-                TextColumn::make('email')
+                Tables\Columns\TextColumn::make('email')
                     ->searchable()
                     ->sortable()
                     ->label(strval(__('filament-sanctum::filament-sanctum.field.user.email'))),
-                IconColumn::make('email_verified_at')
+                Tables\Columns\IconColumn::make('email_verified_at')
                     ->options([
                         'heroicon-o-check-circle',
                         'heroicon-o-x-circle' => fn ($state): bool => $state === null,
@@ -76,7 +79,7 @@ class AccountResource extends Resource
                     ->label(strval(__('filament-sanctum::filament-sanctum.field.user.verified_at'))),
             ])
             ->filters([
-                TernaryFilter::make('email_verified_at')
+                Filters\TernaryFilter::make('email_verified_at')
                     ->label(strval(__('filament-sanctum::filament-sanctum.filter.verified')))
                     ->nullable(),
             ])
