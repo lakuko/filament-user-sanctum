@@ -1,6 +1,6 @@
 <?php
 
-namespace Lakuko\FilamentUserSanctum\Database\Factories;
+namespace Lakuko\FilamentSanctum\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 

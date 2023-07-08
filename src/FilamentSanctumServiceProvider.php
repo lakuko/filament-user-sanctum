@@ -1,13 +1,13 @@
 <?php
 
-namespace Lakuko\FilamentUserSanctum;
+namespace Lakuko\FilamentSanctum;
 
 use Filament\PluginServiceProvider;
 use Spatie\LaravelPackageTools\Package;
 
-class FilamentUserSanctumServiceProvider extends PluginServiceProvider
+class FilamentSanctumServiceProvider extends PluginServiceProvider
 {
-    public static string $name = 'filament-user-sanctum';
+    public static string $name = 'filament-sanctum';
 
     protected array $resources = [
         // CustomResource::class,
@@ -22,15 +22,15 @@ class FilamentUserSanctumServiceProvider extends PluginServiceProvider
     ];
 
     protected array $styles = [
-        'plugin-filament-user-sanctum' => __DIR__.'/../resources/dist/filament-user-sanctum.css',
+        'plugin-filament-sanctum' => __DIR__.'/../resources/dist/filament-sanctum.css',
     ];
 
     protected array $scripts = [
-        'plugin-filament-user-sanctum' => __DIR__.'/../resources/dist/filament-user-sanctum.js',
+        'plugin-filament-sanctum' => __DIR__.'/../resources/dist/filament-sanctum.js',
     ];
 
     // protected array $beforeCoreScripts = [
-    //     'plugin-filament-user-sanctum' => __DIR__ . '/../resources/dist/filament-user-sanctum.js',
+    //     'plugin-filament-sanctum' => __DIR__ . '/../resources/dist/filament-sanctum.js',
     // ];
 
     public function configurePackage(Package $package): void

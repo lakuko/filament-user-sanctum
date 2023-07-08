@@ -1,12 +1,12 @@
 <?php
 
-namespace Lakuko\FilamentUserSanctum\Tests;
+namespace Lakuko\FilamentSanctum\Tests;
 
 use Filament\FilamentServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Lakuko\FilamentUserSanctum\FilamentUserSanctumServiceProvider;
+use Lakuko\FilamentSanctum\FilamentSanctumServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -15,7 +15,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Lakuko\\FilamentUserSanctum\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Lakuko\\FilamentSanctum\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 
@@ -24,7 +24,7 @@ class TestCase extends Orchestra
         return [
             LivewireServiceProvider::class,
             FilamentServiceProvider::class,
-            FilamentUserSanctumServiceProvider::class,
+            FilamentSanctumServiceProvider::class,
         ];
     }
 

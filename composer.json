@@ -1,12 +1,12 @@
 {
-    "name": "lakuko/filament-user-sanctum",
+    "name": "lakuko/filament-sanctum",
     "description": "Filament plugin to manage user and token from sanctum",
     "keywords": [
         "Lakuko",
         "laravel",
-        "filament-user-sanctum"
+        "filament-sanctum"
     ],
-    "homepage": "https://github.com/lakuko/filament-user-sanctum",
+    "homepage": "https://github.com/lakuko/filament-sanctum",
     "license": "MIT",
     "authors": [
         {

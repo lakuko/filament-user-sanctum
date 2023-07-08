@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Filament\Resources\UserResource\Pages;
+namespace Lakuko\FilamentSanctum\Resources\UserResource\Pages;
 
-use App\Filament\Resources\UserResource;
+use Lakuko\FilamentSanctum\Resources\UserResource;
 use Filament\Pages\Actions;
 use Filament\Resources\Pages\CreateRecord;
 use Illuminate\Support\Facades\Config;
