@@ -3,7 +3,7 @@
 return [
 
 
-    'section.group'                 => 'User Manager',
+    'section.group'                 => 'Account',
     'section.users'                 => 'Users',
     'section.user'                  => 'User',
 
