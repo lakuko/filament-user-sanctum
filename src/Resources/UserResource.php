@@ -1,9 +1,9 @@
 <?php
 
-namespace Lakuko\FilamentUserSanctum\Resources;
+namespace Lakuko\FilamentSanctum\Resources;
 
-use Lakuko\FilamentUserSanctum\Resources\UserResource\Pages;
-use Lakuko\FilamentUserSanctum\Resources\UserResource\RelationManagers;
+use Lakuko\FilamentSanctum\Resources\UserResource\Pages;
+use Lakuko\FilamentSanctum\Resources\UserResource\RelationManagers;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -14,29 +14,30 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class UserResource extends Resource
 {
-
     protected static ?string $navigationIcon = 'heroicon-o-user';
 
     protected static ?string $recordTitleAttribute = 'email';
 
-    public function __construct() 
-    {
-        static::$model = config('filament-user-sanctum.models.User');
-    }
+    protected static ?string $slug = 'user-manage';
 
-    protected static function getNavigationGroup(): ?string
+    public function __consxtruct() 
     {
-        return strval(__('filament-user-sanctum::filament-user-sanctum.section.group'));
+        static::$model = config('filament-sanctum.models.User');
     }
 
     public static function getLabel(): string
     {
-        return strval(__('filament-user-sanctum::filament-user-sanctum.section.user'));
+        return strval(__('filament-sanctum::filament-sanctum.section.user'));
     }
 
     public static function getPluralLabel(): string
     {
-        return strval(__('filament-user-sanctum::filament-user-sanctum.section.users'));
+        return strval(__('filament-sanctum::filament-sanctum.section.users'));
+    }
+
+    protected static function getNavigationGroup(): ?string
+    {
+        return strval(__('filament-sanctum::filament-sanctum.section.group'));
     }
 
     public static function form(Form $form): Form
@@ -44,13 +45,13 @@ class UserResource extends Resource
         return $form
             ->schema([
                 TextInput::make('name')
-                    ->label(strval(__('filament-user-sanctum::filament-user-sanctum.field.user.name')))
+                    ->label(strval(__('filament-sanctum::filament-sanctum.field.user.name')))
                     ->required(),
                 TextInput::make('email')
                     ->required()
                     ->email()
                     ->unique(table: static::$model, ignorable: fn ($record) => $record)
-                    ->label(strval(__('filament-user-sanctum::filament-user-sanctum.field.user.email'))),
+                    ->label(strval(__('filament-sanctum::filament-sanctum.field.user.email'))),
             ]);
     }
 
@@ -60,15 +61,15 @@ class UserResource extends Resource
             ->columns([
                 TextColumn::make('id')
                     ->sortable()
-                    ->label(strval(__('filament-user-sanctum::filament-user-sanctum.field.id'))),
+                    ->label(strval(__('filament-sanctum::filament-sanctum.field.id'))),
                 TextColumn::make('name')
                     ->searchable()
                     ->sortable()
-                    ->label(strval(__('filament-user-sanctum::filament-user-sanctum.field.user.name'))),
+                    ->label(strval(__('filament-sanctum::filament-sanctum.field.user.name'))),
                 TextColumn::make('email')
                     ->searchable()
                     ->sortable()
-                    ->label(strval(__('filament-user-sanctum::filament-user-sanctum.field.user.email'))),
+                    ->label(strval(__('filament-sanctum::filament-sanctum.field.user.email'))),
                 IconColumn::make('email_verified_at')
                     ->options([
                         'heroicon-o-check-circle',
@@ -78,11 +79,11 @@ class UserResource extends Resource
                         'success',
                         'danger' => fn ($state): bool => $state === null,
                     ])
-                    ->label(strval(__('filament-user-sanctum::filament-user-sanctum.field.user.verified_at')))
+                    ->label(strval(__('filament-sanctum::filament-sanctum.field.user.verified_at')))
             ])
             ->filters([
                 TernaryFilter::make('email_verified_at')
-                    ->label(strval(__('filament-user-sanctum::filament-user-sanctum.filter.verified')))
+                    ->label(strval(__('filament-sanctum::filament-sanctum.filter.verified')))
                     ->nullable(),
             ])
             ->actions([

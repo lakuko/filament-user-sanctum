@@ -1,5 +1,5 @@
 <?php
 
-use Lakuko\FilamentUserSanctum\Tests\TestCase;
+use Lakuko\FilamentSanctum\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Filament\Resources\UserResource\Pages;
+namespace Lakuko\FilamentSanctum\Resources\UserResource\Pages;
 
-use App\Filament\Resources\UserResource;
+use Lakuko\FilamentSanctum\Resources\UserResource;
 use Filament\Pages\Actions;
 use Filament\Resources\Pages\ListRecords;
+use Illuminate\Support\Facades\Config;
 
 class ListUsers extends ListRecords
 {

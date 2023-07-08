@@ -1,12 +1,12 @@
 {
-    "name": "lakuko/filament-user-sanctum",
+    "name": "lakuko/filament-sanctum",
     "description": "Filament plugin to manage user and token from sanctum",
     "keywords": [
         "Lakuko",
         "laravel",
-        "filament-user-sanctum"
+        "filament-sanctum"
     ],
-    "homepage": "https://github.com/lakuko/filament-user-sanctum",
+    "homepage": "https://github.com/lakuko/filament-sanctum",
     "license": "MIT",
     "authors": [
         {
@@ -29,18 +29,19 @@
         "pestphp/pest-plugin-laravel": "^1.1",
         "pestphp/pest-plugin-livewire": "^1.0",
         "pestphp/pest-plugin-parallel": "^0.3",
+        "phpstan/phpstan": "^1.10",
         "phpunit/phpunit": "^9.5",
         "spatie/laravel-ray": "^1.26"
     },
     "autoload": {
         "psr-4": {
-            "Lakuko\\FilamentUserSanctum\\": "src",
-            "Lakuko\\FilamentUserSanctum\\Database\\Factories\\": "database/factories"
+            "Lakuko\\FilamentSanctum\\": "src",
+            "Lakuko\\FilamentSanctum\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Lakuko\\FilamentUserSanctum\\Tests\\": "tests"
+            "Lakuko\\FilamentSanctum\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -62,10 +63,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Lakuko\\FilamentUserSanctum\\FilamentUserSanctumServiceProvider"
+                "Lakuko\\FilamentSanctum\\FilamentSanctumServiceProvider"
             ],
             "aliases": {
-                "FilamentUserSanctum": "Lakuko\\FilamentUserSanctum\\Facades\\FilamentUserSanctum"
+                "FilamentSanctum": "Lakuko\\FilamentSanctum\\Facades\\FilamentSanctum"
             }
         }
     },

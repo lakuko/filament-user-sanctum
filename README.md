@@ -1,9 +1,9 @@
 # Filament plugin to manage user and token from sanctum
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/lakuko/filament-user-sanctum.svg?style=flat-square)](https://packagist.org/packages/lakuko/filament-user-sanctum)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/lakuko/filament-user-sanctum/run-tests?label=tests)](https://github.com/lakuko/filament-user-sanctum/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/lakuko/filament-user-sanctum/Check%20&%20fix%20styling?label=code%20style)](https://github.com/lakuko/filament-user-sanctum/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/lakuko/filament-user-sanctum.svg?style=flat-square)](https://packagist.org/packages/lakuko/filament-user-sanctum)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/lakuko/filament-sanctum.svg?style=flat-square)](https://packagist.org/packages/lakuko/filament-sanctum)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/lakuko/filament-sanctum/run-tests?label=tests)](https://github.com/lakuko/filament-sanctum/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/lakuko/filament-sanctum/Check%20&%20fix%20styling?label=code%20style)](https://github.com/lakuko/filament-sanctum/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/lakuko/filament-sanctum.svg?style=flat-square)](https://packagist.org/packages/lakuko/filament-sanctum)
 
 
 
@@ -14,26 +14,26 @@ This is where your description should go. Limit it to a paragraph or two. Consid
 You can install the package via composer:
 
 ```bash
-composer require lakuko/filament-user-sanctum
+composer require lakuko/filament-sanctum
 ```
 
 You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --tag="filament-user-sanctum-migrations"
+php artisan vendor:publish --tag="filament-sanctum-migrations"
 php artisan migrate
 ```
 
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag="filament-user-sanctum-config"
+php artisan vendor:publish --tag="filament-sanctum-config"
 ```
 
 Optionally, you can publish the views using
 
 ```bash
-php artisan vendor:publish --tag="filament-user-sanctum-views"
+php artisan vendor:publish --tag="filament-sanctum-views"
 ```
 
 This is the contents of the published config file:
@@ -46,8 +46,8 @@ return [
 ## Usage
 
 ```php
-$filament-user-sanctum = new Lakuko\FilamentUserSanctum();
-echo $filament-user-sanctum->echoPhrase('Hello, Lakuko!');
+$filament-sanctum = new Lakuko\FilamentSanctum();
+echo $filament-sanctum->echoPhrase('Hello, Lakuko!');
 ```
 
 ## Testing
