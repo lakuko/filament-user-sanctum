@@ -77,7 +77,7 @@ class AccountResource extends Resource
                     ->label(strval(__('filament-sanctum::filament-sanctum.field.user.verified_at'))),
             ])
             ->filters([
-                Filters\TernaryFilter::make('email_verified_at')
+                Tables\Filters\TernaryFilter::make('email_verified_at')
                     ->label(strval(__('filament-sanctum::filament-sanctum.filter.verified')))
                     ->nullable(),
             ])
