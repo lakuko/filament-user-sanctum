@@ -33,6 +33,11 @@ class FilamentSanctumServiceProvider extends PluginServiceProvider
     //     'plugin-filament-sanctum' => __DIR__ . '/../resources/dist/filament-sanctum.js',
     // ];
 
+    protected function getResources(): array
+    {
+        return config('filament-sanctum.resources');
+    }
+
     public function configurePackage(Package $package): void
     {
         $package->name(static::$name)
