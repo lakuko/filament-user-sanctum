@@ -14,19 +14,15 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class UserResource extends Resource
 {
-
     protected static ?string $navigationIcon = 'heroicon-o-user';
 
     protected static ?string $recordTitleAttribute = 'email';
 
+    protected static ?string $slug = 'user-manage';
+
     public function __construct() 
     {
         static::$model = config('filament-user-sanctum.models.User');
-    }
-
-    protected static function getNavigationGroup(): ?string
-    {
-        return strval(__('filament-user-sanctum::filament-user-sanctum.section.group'));
     }
 
     public static function getLabel(): string
@@ -37,6 +33,11 @@ class UserResource extends Resource
     public static function getPluralLabel(): string
     {
         return strval(__('filament-user-sanctum::filament-user-sanctum.section.users'));
+    }
+
+    protected static function getNavigationGroup(): ?string
+    {
+        return strval(__('filament-user-sanctum::filament-user-sanctum.section.group'));
     }
 
     public static function form(Form $form): Form
