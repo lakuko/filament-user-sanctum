@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace Lakuko\FilamentSanctum\Models;
 
 use Laravel\Sanctum\PersonalAccessToken as SanctumPersonalAccessToken;
 
