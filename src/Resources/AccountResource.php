@@ -107,6 +107,7 @@ class AccountResource extends Resource
             'index' => Pages\ListAccounts::route('/'),
             'create' => Pages\CreateAccount::route('/create'),
             'edit' => Pages\EditAccount::route('/{record}/edit'),
+            'view' => Pages\ViewAccount::route('/{record}')
         ];
     }
 }
