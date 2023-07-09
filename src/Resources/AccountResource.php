@@ -2,13 +2,14 @@
 
 namespace Lakuko\FilamentSanctum\Resources;
 
-use Filament\Forms\Components\TextInput;
+use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
 use Lakuko\FilamentSanctum\Resources\AccountResource\Pages;
 use Lakuko\FilamentSanctum\Resources\AccountResource\RelationManagers;
+use Filament\Forms\Components\TextInput;
 
 class AccountResource extends Resource
 {
@@ -40,14 +41,17 @@ class AccountResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('name')
+                Forms\Components\Card::make()
+                ->schema([
+                    TextInput::make('name')
                     ->label(strval(__('filament-sanctum::filament-sanctum.field.user.name')))
                     ->required(),
-                TextInput::make('email')
+                    TextInput::make('email')
                     ->required()
                     ->email()
                     ->unique(table: static::$model, ignorable: fn ($record) => $record)
                     ->label(strval(__('filament-sanctum::filament-sanctum.field.user.email'))),
+                ]),
             ]);
     }
 
