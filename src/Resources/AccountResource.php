@@ -15,9 +15,9 @@ class AccountResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'email';
 
-    public function __construct()
+    public static function getModel(): string
     {
-        static::$model = config('filament-sanctum.models.Account');
+        return config('filament-sanctum.models.Account');
     }
 
     public static function getLabel(): string
