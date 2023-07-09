@@ -15,8 +15,8 @@ class ViewAccount extends ViewRecord
 
     protected function getActions(): array
     {
-        return [
+        return array_merge([
             Actions\ResetAction::make(),
-        ];
+        ], parent::getActions());
     }
 }
