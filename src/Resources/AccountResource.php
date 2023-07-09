@@ -84,8 +84,7 @@ class AccountResource extends Resource
             ])
             ->filters([
                 Filters\DateFilter::make('email_verified_at')
-                    ->label(strval(__('filament-sanctum::filament-sanctum.filter.verified')))
-                    ->nullable(),
+                    ->label(strval(__('filament-sanctum::filament-sanctum.field.user.verified'))),
             ])
             ->actions([
                 Tables\Actions\ViewAction::make(),
