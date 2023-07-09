@@ -7,8 +7,6 @@ use Filament\Resources\Form;
 use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Resources\Table;
 use Filament\Tables;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Webbingbrasil\FilamentAdvancedFilter\Filters\TextFilter;
 
 class TokenRelationManager extends RelationManager
@@ -17,8 +15,9 @@ class TokenRelationManager extends RelationManager
 
     protected static ?string $recordTitleAttribute = 'name';
 
-    protected function canCreate(): bool { 
-        return false; 
+    protected function canCreate(): bool
+    {
+        return false;
     }
 
     public static function form(Form $form): Form
@@ -53,5 +52,5 @@ class TokenRelationManager extends RelationManager
             ])
             ->bulkActions([
             ]);
-    }    
+    }
 }
