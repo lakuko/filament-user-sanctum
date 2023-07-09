@@ -2,9 +2,9 @@
 
 namespace Lakuko\FilamentSanctum\Resources\AccountResource\Pages;
 
-use Lakuko\FilamentSanctum\Actions;
 use Filament\Resources\Pages\ViewRecord;
 use Illuminate\Support\Facades\Config;
+use Lakuko\FilamentSanctum\Actions;
 
 class ViewAccount extends ViewRecord
 {
