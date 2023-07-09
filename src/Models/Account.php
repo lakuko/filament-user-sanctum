@@ -45,4 +45,9 @@ class Account extends Authenticatable
     ];
 
     protected $table = 'users';
+
+    public function tokens()
+    {
+        return $this->hasMany(Token::class, 'id', 'user_id');
+    }
 }

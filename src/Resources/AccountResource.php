@@ -8,6 +8,7 @@ use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
 use Lakuko\FilamentSanctum\Resources\AccountResource\Pages;
+use Lakuko\FilamentSanctum\Resources\AccountResource\RelationManagers;
 
 class AccountResource extends Resource
 {
@@ -92,7 +93,7 @@ class AccountResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            RelationManagers\TokenRelationManager::class,
         ];
     }
 
