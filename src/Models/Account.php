@@ -48,6 +48,6 @@ class Account extends Authenticatable
 
     public function tokens()
     {
-        return $this->hasMany(Token::class, 'id', 'user_id');
+        return $this->hasMany(config('filament-sanctum.models.Token'), 'tokenable_id');
     }
 }
