@@ -7,7 +7,7 @@ use Illuminate\Contracts\Auth\Authenticatable as User;
 
 class ResetAction
 {
-    public function make(): Action
+    public static function make(): Action
     {
         return Action::make('reset')
             ->label(__('filament-sanctum::filament-sanctum.button.reset'))
@@ -15,7 +15,7 @@ class ResetAction
             ->action(fn ($record) => static::reset($record));
     }
 
-    public function reset(User $record): Action
+    public static function reset(User $record): Action
     {
 
     }
