@@ -88,7 +88,7 @@ class AccountResource extends Resource
                     ->nullable(),
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                Tables\Actions\ViewAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
@@ -106,8 +106,6 @@ class AccountResource extends Resource
     {
         return [
             'index' => Pages\ListAccounts::route('/'),
-            'create' => Pages\CreateAccount::route('/create'),
-            'edit' => Pages\EditAccount::route('/{record}/edit'),
             'view' => Pages\ViewAccount::route('/{record}'),
         ];
     }
