@@ -1,6 +1,6 @@
 <?php
 
-namespace Lakuko\FilamentTransaction\Resources\TransactionResource\RelationManagers;
+namespace Lakuko\FilamentSanctum\Resources\AccountResource\RelationManagers;
 
 use Filament\Forms;
 use Filament\Resources\Form;
