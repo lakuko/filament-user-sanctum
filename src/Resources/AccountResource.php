@@ -10,6 +10,7 @@ use Filament\Resources\Table;
 use Filament\Tables;
 use Lakuko\FilamentSanctum\Resources\AccountResource\Pages;
 use Lakuko\FilamentSanctum\Resources\AccountResource\RelationManagers;
+use Webbingbrasil\FilamentAdvancedFilter\Filters;
 
 class AccountResource extends Resource
 {
@@ -82,7 +83,7 @@ class AccountResource extends Resource
                     ->label(strval(__('filament-sanctum::filament-sanctum.field.user.verified_at'))),
             ])
             ->filters([
-                Tables\Filters\TernaryFilter::make('email_verified_at')
+                Filters\DateFilter::make('email_verified_at')
                     ->label(strval(__('filament-sanctum::filament-sanctum.filter.verified')))
                     ->nullable(),
             ])
