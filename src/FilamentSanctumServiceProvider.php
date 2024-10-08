@@ -22,11 +22,11 @@ class FilamentSanctumServiceProvider extends PluginServiceProvider
     ];
 
     protected array $styles = [
-        'plugin-filament-sanctum' => __DIR__.'/../resources/dist/filament-sanctum.css',
+        //'plugin-filament-sanctum' => __DIR__.'/../resources/dist/filament-sanctum.css',
     ];
 
     protected array $scripts = [
-        'plugin-filament-sanctum' => __DIR__.'/../resources/dist/filament-sanctum.js',
+        //'plugin-filament-sanctum' => __DIR__.'/../resources/dist/filament-sanctum.js',
     ];
 
     // protected array $beforeCoreScripts = [
@@ -41,7 +41,7 @@ class FilamentSanctumServiceProvider extends PluginServiceProvider
     public function configurePackage(Package $package): void
     {
         $package->name(static::$name)
-        ->hasConfigFile()
-        ->hasTranslations();
+            ->hasConfigFile()
+            ->hasTranslations();
     }
 }

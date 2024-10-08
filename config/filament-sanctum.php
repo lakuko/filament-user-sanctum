@@ -3,9 +3,10 @@
 // config for Lakuko/FilamentUserSanctum
 return [
     'models' => [
-        'User' => \Lakuko\FilamentSanctum\Models\User::class,
+        'Account' => \Lakuko\FilamentSanctum\Models\Account::class,
+        'Token' => \Lakuko\FilamentSanctum\Models\Token::class,
     ],
     'resources' => [
-        'UserResource' => \Lakuko\FilamentSanctum\Resources\UserResource::class,
+        'AccountResource' => \Lakuko\FilamentSanctum\Resources\AccountResource::class,
     ],
 ];

@@ -1,17 +1,16 @@
 <?php
 
-namespace Lakuko\FilamentSanctum\Resources\UserResource\Pages;
+namespace Lakuko\FilamentSanctum\Resources\AccountResource\Pages;
 
-use Lakuko\FilamentSanctum\Resources\UserResource;
 use Filament\Pages\Actions;
 use Filament\Resources\Pages\ListRecords;
 use Illuminate\Support\Facades\Config;
 
-class ListUsers extends ListRecords
+class ListAccounts extends ListRecords
 {
     public static function getResource(): string
     {
-        return Config::get('filament-user-sanctum.resources.UserResource');
+        return Config::get('filament-sanctum.resources.AccountResource');
     }
 
     protected function getActions(): array
